@@ -1,0 +1,25 @@
+<div class="container">
+    <img src="../../../assets/images/logo.svg" id="logo" alt="Logo">
+    <div class="links">
+        <span class="link">Features</span>
+        <span class="link">Pricing</span>
+        <span class="link">Resources</span>
+    </div>
+    <div class="auth-links">
+        <button class="link">Login</button>
+        <button class="btn-primary">Sign Up</button>
+    </div>
+    <div class="menu-mobile-icon">
+        <fa-icon (click)="showMenu = !showMenu" [icon]="!showMenu ? faBars : faClose"></fa-icon>
+    </div>
+</div>
+
+
+<div class="menu-mobile" *ngIf="showMenu">
+    <span class="link">Features</span>
+    <span class="link">Pricing</span>
+    <span class="link">Resources</span>
+    <hr class="divider">
+    <span class="link">Login</span>
+    <button class="btn-primary">Sign Up</button>
+</div>

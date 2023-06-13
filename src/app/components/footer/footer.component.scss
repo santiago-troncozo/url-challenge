@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--very-dark-blue);
+    padding-top: 30px;
+    padding: 2rem 10%;
+    #logo {
+        padding: 0;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+    }
+    #logo, .section, .social-media-icons {
+        padding: 1rem;
+    }
+    .section {
+        font-size: .9rem;
+        .title {
+            font-size: .9rem;
+            font-weight: 700;
+            color: white;
+            margin: 0 0 .7rem 0;
+
+        }
+        .links {
+            display: flex;
+            flex-flow: column;
+            color: var(--gray);
+            .link {
+                margin: .2rem 0;
+                cursor: pointer;
+                &:hover {
+                    color: var(--cyan);
+                }
+            }
+        }
+    }
+
+    .social-media-icons img{
+        margin: .6rem;
+        width: 1.2rem;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-flow: column;
+        align-items: center;
+        .section {
+            text-align: center;
+        }
+    }
+}

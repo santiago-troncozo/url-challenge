@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-primary {
+    font-weight: 700;
+    border: none;
+    color: white;
+    background-color: var(--cyan);
+    font-size: 1.1rem;
+    padding: 0.8rem 2.5rem;
+    border-radius: 1.9rem;
+    cursor: pointer;
+    &:hover {
+        background: hsl(180deg 80.04% 82.65% / 88%);
+    }
+}
+
+:root {
+    --gray: hsl(0, 0%, 75%);
+    --cyan: hsl(180, 66%, 49%);
+    --dark-violet: hsl(257, 27%, 26%);
+    --red: hsl(0, 87%, 67%);
+    --grayish-violet: hsl(257, 7%, 63%);
+    --very-dark-blue: hsl(255, 11%, 22%);
+    --very-dark-violet: hsl(260, 8%, 14%);
+}

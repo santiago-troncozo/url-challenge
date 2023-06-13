@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="main">
+        <div class="left">
+            <h2>More than just shorter links</h2>
+            <p>Build your brand’s recognition and get detailed insights
+                on how your links are performing.</p>
+            <button class="btn-primary">Get Started</button>
+        </div>
+        <img class="illustration-working" src="../../../assets/images/illustration-working.svg" alt="">
+    </div>
+    <section class="middle-section">
+        <div class="url-shortener">
+            <input #inputUrl [ngClass]="{'invalid': errorMessage}" #inputURL (keyup.enter)="addUrl(inputURL.value)" placeholder="Shorten a link here..." type="text">
+            <span class="error-message">{{ errorMessage }}</span>
+            <button class="btn-primary" (click)="addUrl(inputURL.value)">Shorten It!</button>
+        </div>
+    </section>
+    <section class="urls">
+        <div *ngFor="let url of urls" class="url">
+            <span class="original-url">{{ url.url }}</span>
+            <a class="shortened-url">{{ url.shortUrl }}</a>
+            <button class="btn-primary btn-shortening" [ngClass]="{'active': url.isCopied}" (click)="copyUrl(url)" >{{ url.isCopied ? 'Copied!' : 'Copy'}}</button>
+        </div>
+    </section>
+    <div class="advanced-statistics">
+        <h3>Advanced Statistics</h3>
+        <p class="sub-title">Track how your links are performing across the web with our
+            advanced statistics dashboard.</p>
+        <div class="cards">
+            <div class="card brand-recognition-card">
+                <img class="icon-card" src="../../../assets/images/icon-brand-recognition.svg" alt="">
+                <h5 class="title-card">Brand Recognition</h5>
+                <p class="description-card">Boost your brand recognition with each click. Generic links don’t
+                    mean a thing. Branded links help instil confidence in your content.</p>
+            </div>
+            <div class="card detail-records-card">
+                <img class="icon-card" src="../../../assets/images/icon-detailed-records.svg" alt="">
+                <h5 class="title-card">Detailed Records</h5>
+                <p class="description-card">Gain insights into who is clicking your links. Knowing when and where
+                    people engage with your content helps inform better decisions.</p>
+            </div>
+            <div class="card fully-customizable-card">
+                <img class="icon-card" src="../../../assets/images/icon-fully-customizable.svg" alt="">
+                <h5 class="title-card">Fully Customizable</h5>
+                <p class="description-card">Improve brand awareness and content discoverability through customizable
+                    links, supercharging audience engagement.</p>
+            </div>
+        </div>
+    </div>
+    <section class="bottom-section">
+        <h3>Boost your links today</h3>
+        <button class="btn-primary">Get Started</button>
+    </section>
+</div>
